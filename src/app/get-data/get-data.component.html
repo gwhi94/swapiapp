@@ -1,0 +1,15 @@
+<div class="btn-container">
+        <a class="btn btn-primary btn-lg" href="#" (click)="getData()" role="button"><span *ngIf="loading">Loading..</span><span *ngIf="!loading">Get Star Wars Characters !</span></a>
+</div>  
+<mat-card *ngFor="let extractedCharacter of extractedCharacters" class="character-card">
+        
+        <mat-card-content>
+                <mat-card-title class="character-name">{{extractedCharacter.name}}</mat-card-title>
+                <p>Height: {{extractedCharacter.height}} cm </p> 
+                <p>Hair Colour: {{extractedCharacter.hair_color}}</p>   
+                <p>Eye Colour: {{extractedCharacter.eye_color}}</p>  
+                <p>Skin Colour: {{extractedCharacter.skin_color}}</p> 
+                <p>Birthday: {{extractedCharacter.birth_year}}</p> 
+                <p>Gender: {{extractedCharacter.gender}}</p>
+        </mat-card-content>
+</mat-card>
